@@ -29,7 +29,9 @@
     "start": "ts-node ./src/main.ts",
     "test": "jest ./src",
     "test:coverage": "jest ./src --coverage",
-    "test:json": "jest ./src --json --outputFile=test-results.json"
+    "test:json": "jest ./src --json --outputFile=test-results.json",
+    "fnm": "npm run start"
+
   },
   "type": "module",
   "engines": {

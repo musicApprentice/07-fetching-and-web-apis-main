@@ -3,9 +3,10 @@ import { fetchCurrentTemperature } from "./fetchCurrentTemperature.js";
 
 describe("fetchCurrentTemperature", () => {
   it("follows type specification", () => {
-    const promise = fetchCurrentTemperature({ lat: -71.05, lon: 90 });
+    const promise = fetchCurrentTemperature({ lat: 40, lon: 40 });
 
     return promise.then(result => {
+      console.log("After returning", result);
       assert(typeof result === "object"); // Assert the result is an object
       assert(Array.isArray(result.time)); // Assert the result has an array time field
       assert(result.time.every(x => typeof x === "string")); // Assert each element in that time is a sting
